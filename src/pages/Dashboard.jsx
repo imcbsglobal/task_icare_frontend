@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     // Fetch dashboard data including user info
     axios
-      .get("http://127.0.0.1:8000/api/dashboard/", {
+      .get("https://icare.imcbs.com/api/dashboard/", {
         withCredentials: true, // send session cookie
         // If using JWT:
         // headers: { Authorization: `Bearer ${localStorage.getItem("access_token")}` },
