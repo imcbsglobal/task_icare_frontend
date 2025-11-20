@@ -1,6 +1,7 @@
 import React from "react";
-import { features, otherFeatures } from "../data/featuresData.js";
-const Features = () => {
+import Options from "./Options.jsx";
+import { otherOptions } from "../data/OptionsData.js";
+const O = () => {
   return (
     <div className="h-screen w-full bg-gradient-to-br from-slate-50 via-orange-50 to-orange-300 flex flex-col justify-start items-center ">
       {" "}
@@ -20,8 +21,8 @@ const Features = () => {
       {/* Core Functions Grid */}{" "}
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-3 gap-2 mb-6 px-1 ">
         {" "}
-        {features.map((feature, idx) => {
-          const Icon = feature.icon;
+        {Options.map((Options, idx) => {
+          const Icon = Options.icon;
           return (
             <div
               key={idx}
@@ -33,9 +34,9 @@ const Features = () => {
                 <Icon className={`w-5 h-5 `} />{" "}
               </div>{" "}
               <h3 className="font-semibold text-gray-800 text-sm">
-                {feature.title}
+                {Options.title}
               </h3>{" "}
-              <p className="text-gray-600 text-xs">{feature.desc}</p>{" "}
+              <p className="text-gray-600 text-xs">{Options.desc}</p>{" "}
             </div>
           );
         })}{" "}
@@ -46,7 +47,7 @@ const Features = () => {
       {/* Other Features */}{" "}
       <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 text-center">
         {" "}
-        {otherFeatures.map((item, idx) => (
+        {otherOptions.map((item, idx) => (
           <div key={idx} className="p-3 bg-orange rounded-md shadow">
             {" "}
             <h4 className="font-semibold text-gray-800">{item.title}</h4>{" "}
@@ -57,4 +58,4 @@ const Features = () => {
     </div>
   );
 };
-export default Features;
+export default Options;

@@ -1,5 +1,5 @@
-import { useState } from "react";
-import { Link, useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import {
   Home,
   Star,
@@ -8,36 +8,70 @@ import {
   X,
   PlayCircle,
   Users,
+  LayoutDashboard,
+  LogOut,
+  Images,
 } from "lucide-react";
 import logo from "../assets/logo.png";
 
 const Sidebar = () => {
   const { pathname } = useLocation();
-  const [isOpen, setIsOpen] = useState(false);
+  const navigate = useNavigate();
 
-  const menuItems = [
+  const [isOpen, setIsOpen] = useState(false);
+  const [isAdmin, setIsAdmin] = useState(
+    localStorage.getItem("isAdmin") === "true"
+  );
+
+  useEffect(() => {
+    const handleStorageChange = () => {
+      setIsAdmin(localStorage.getItem("isAdmin") === "true");
+    };
+    window.addEventListener("storage", handleStorageChange);
+    return () => window.removeEventListener("storage", handleStorageChange);
+  }, []);
+
+  const handleLogout = () => {
+    localStorage.removeItem("isAdmin");
+    setIsAdmin(false);
+    navigate("/");
+    window.dispatchEvent(new Event("storage"));
+  };
+
+  const baseMenu = [
     { name: "Home", path: "/", icon: <Home className="w-5 h-5" /> },
-    { name: "Features", path: "/features", icon: <Star className="w-5 h-5" /> },
+    { name: "Options", path: "/options", icon: <Star className="w-5 h-5" /> },
+    // {
+    //   name: "Demonstration",
+    //   path: "/demonstration",
+    //   icon: <PlayCircle className="w-5 h-5" />,
+    // },
     {
-      name: "Demonstration",
-      path: "/demonstration",
-      icon: <PlayCircle className="w-5 h-5" />,
-    },
-    {
-      name: "Testimonials",
-      path: "/testimonials",
+      name: "Showcase",
+      path: "/showcase",
       icon: <Users className="w-5 h-5" />,
     },
-    {
-      name: "Company",
-      path: "/company",
-      icon: <Building2 className="w-5 h-5" />,
-    },
+    { name: "Company", path: "/company", icon: <Building2 className="w-5 h-5" /> },
   ];
+
+  const menuItems = isAdmin
+    ? [
+        ...baseMenu,
+        {
+          name: "Dashboard",
+          path: "/dashboard",
+          icon: <LayoutDashboard className="w-5 h-5" />,
+        },
+        {
+          name: "Gallery",
+          path: "/gallery",
+          icon: <Images className="w-5 h-5" />,
+        },
+      ]
+    : baseMenu;
 
   return (
     <>
-      {/* Hamburger for Mobile */}
       <button
         className="fixed top-4 left-4 z-50 p-2 bg-orange-500 text-white rounded-md lg:hidden"
         onClick={() => setIsOpen(!isOpen)}
@@ -45,14 +79,12 @@ const Sidebar = () => {
         {isOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
       </button>
 
-      {/* Sidebar */}
       <aside
         className={`bg-white border-r border-gray-200 w-64 h-screen p-6 flex flex-col gap-8 shadow-md
           fixed top-0 left-0 transform transition-transform duration-300 z-40
           ${isOpen ? "translate-x-0" : "-translate-x-full"} 
           lg:translate-x-0`}
       >
-        {/* Brand */}
         <div className="flex flex-col items-center gap-3">
           <img src={logo} alt="IMC Logo" className="w-16 h-16 object-contain" />
           <h1 className="text-2xl font-bold text-orange-600 text-center">
@@ -60,11 +92,7 @@ const Sidebar = () => {
           </h1>
         </div>
 
-        {/* Gap between brand and menu */}
-        <div className="mt-6"></div>
-
-        {/* Menu */}
-        <nav className="flex flex-col gap-2">
+        <nav className="flex flex-col gap-2 mt-6">
           {menuItems.map((item) => (
             <Link
               key={item.path}
@@ -80,10 +108,19 @@ const Sidebar = () => {
               <span>{item.name}</span>
             </Link>
           ))}
+
+          {isAdmin && (
+            <button
+              onClick={handleLogout}
+              className="flex items-center gap-3 mt-4 px-4 py-3 rounded-lg font-medium text-red-600 hover:bg-red-100"
+            >
+              <LogOut className="w-5 h-5" />
+              Logout
+            </button>
+          )}
         </nav>
       </aside>
 
-      {/* Mobile Overlay */}
       {isOpen && (
         <div
           className="fixed inset-0 bg-black/20 z-30 lg:hidden"
