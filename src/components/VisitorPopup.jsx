@@ -43,7 +43,7 @@ const VisitorPopup = () => {
 
     setLoading(true);
     try {
-      await axios.post("http://127.0.0.1:8000/api/register/", formData);
+      await axios.post("https://icare.imcbs.com/api/register/", formData);
 
       sessionStorage.setItem("visitorLoginTime", Date.now().toString());
       setShowPopup(false);
@@ -67,7 +67,7 @@ const VisitorPopup = () => {
 
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/admin-login/", adminData);
+      const res = await axios.post("https://icare.imcbs.com/api/admin-login/", adminData);
       if (res.data.message) {
         localStorage.setItem("isAdmin", "true");
         window.dispatchEvent(new Event("storage"));
