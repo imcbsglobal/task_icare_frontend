@@ -16,7 +16,7 @@ const Demonstration = () => {
       setLoading(true);
       setError(null);
       
-      const res = await fetch("http://127.0.0.1:8000/api/demonstration/");
+      const res = await fetch("https://icare.imcbs.com/api/demonstration/");
       
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);

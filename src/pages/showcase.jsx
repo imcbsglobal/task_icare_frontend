@@ -22,7 +22,7 @@ const Showcase = () => {
       setLoading(true);
       setError(null);
       
-      const res = await fetch("http://127.0.0.1:8000/api/showcase/");
+      const res = await fetch("https://icare.imcbs.com/api/showcase/");
       
       if (!res.ok) {
         throw new Error(`HTTP error! status: ${res.status}`);

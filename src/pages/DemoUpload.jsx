@@ -59,7 +59,7 @@ const DemoUpload = () => {
         data.append("website_url", formData.website_url);
       }
 
-      const response = await fetch("http://127.0.0.1:8000/api/demonstration/", {
+      const response = await fetch("https://icare.imcbs.com/api/demonstration/", {
         method: "POST",
         body: data,
       });

@@ -13,7 +13,7 @@ const AdminLogin = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/api/admin-login/", {
+      const res = await axios.post("https://icare.imcbs.com/api/admin-login/", {
         username,
         password,
       });
