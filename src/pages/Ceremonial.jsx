@@ -14,7 +14,7 @@ const Ceremonial = () => {
     description: "",
   });
 
-  const API_BASE = "https://icare.imcbs.com/";
+  const API_BASE = "https://icare.imcbs.com";
 
   useEffect(() => {
     loadEvents();

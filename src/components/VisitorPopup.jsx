@@ -1,5 +1,7 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import logo from './../assets/logo.png';
+//  /src/assets/logo.png
 
 const VisitorPopup = () => {
   const [formData, setFormData] = useState({ name: "", phone: "", email: "" });
@@ -92,7 +94,7 @@ const VisitorPopup = () => {
           <>
             <div className="flex flex-col items-center justify-center mb-3">
               <img
-                src="/src/assets/logo.png"
+                src={logo}
                 alt="IMC Logo"
                 className="w-16 h-16 object-contain mb-2 drop-shadow-md"
               />
