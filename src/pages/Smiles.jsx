@@ -15,7 +15,8 @@ const Smiles = () => {
     preview: "",
   });
 
-  const API_BASE = "https://icare.imcbs.com/";
+  const API_BASE = "https://icare.imcbs.com";
+  // const API_BASE = 'http://127.0.0.1:8000'
 
   useEffect(() => {
     loadItems();
@@ -206,7 +207,7 @@ const Smiles = () => {
               >
                 <div className="relative pb-[56.25%] bg-gray-900">
                   <img
-                    src={`${API_BASE}${item.media_file}`}
+                    src={`${item.media_file}`}
                     alt={item.title}
                     className="absolute top-0 left-0 w-full h-full object-cover"
                   />
