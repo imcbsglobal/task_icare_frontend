@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, Upload, Trash2, X, Save } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Ceremonial = () => {
   const [events, setEvents] = useState([]);
@@ -147,6 +148,12 @@ const Ceremonial = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
+      <SEO
+        title="Ceremonial Events - Store Openings & Celebrations"
+        description="View our collection of ceremonial moments, store openings, and celebration events from IMC Business Solutions and TASK iCare implementations."
+        keywords="ceremonial events, store openings, business celebrations, launch events, TASK iCare implementations, business milestones"
+        url="https://icare.imcbs.com/gallery/ceremonial"
+      />
       <div className="max-w-7xl mx-auto">
 
         {/* BACK LINK AND HEADER */}

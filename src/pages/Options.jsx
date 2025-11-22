@@ -1,9 +1,16 @@
 import React from "react";
+import SEO from "../components/SEO";
 import { Options as optionsData, otherOptions } from "../data/OptionsData.js";
 
 const Options = () => {
   return (
     <div className="min-h-screen w-full bg-gradient-to-br from-slate-50 via-orange-50 to-orange-300 flex flex-col justify-start items-center py-8">
+      <SEO
+        title="Features & Core Highlights - TASK iCare"
+        description="Explore TASK iCare's comprehensive business management features: Sales & Billing, Purchase Management, Stock & Inventory, GST Support, User Roles, Reports & Analytics, Multi-Branch Access, Payment Tracking, and Mobile Access."
+        keywords="inventory features, sales billing, purchase management, stock tracking, GST support, business reports, multi-branch software, payment tracking, user permissions, TASK iCare features"
+        url="https://icare.imcbs.com/options"
+      />
       {/* Header */}
       <div className="text-center mb-6 mt-2 px-4">
         <h1 className="text-4xl font-bold text-gray-800 mb-3">Our Core Highlights</h1>

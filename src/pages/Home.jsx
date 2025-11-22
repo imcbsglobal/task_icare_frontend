@@ -1,4 +1,5 @@
 import React from "react";
+import SEO from "../components/SEO";
 import taskLogo from "../assets/TASK11.png";
 import heroImage from "../assets/Homeimg.webp";
 
@@ -51,6 +52,12 @@ const Home = () => {
 
   return (
     <div className="min-h-screen flex flex-col font-[Outfit] text-gray-800 bg-white">
+      <SEO
+        title="TASK iCare - Complete Inventory & Business Management Software"
+        description="Transform your business operations with TASK iCare — an all-in-one inventory and task management system. Gain complete control over sales, purchases, and stock with real-time accuracy. Boost efficiency and growth through intelligent automation."
+        keywords="TASK iCare, inventory management, business management software, GST billing, sales tracking, purchase management, stock control, barcode system, IMC Business Solutions, Wayanad, Kerala, accounting software, multi-branch management"
+        url="https://icare.imcbs.com/"
+      />
 
       {/* Hero Section */}
       <section className="flex flex-col md:flex-row items-center justify-between px-8 md:px-20 py-20 bg-white">

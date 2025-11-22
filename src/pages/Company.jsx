@@ -1,11 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Company = () => {
   return (
     <div
       className="relative overflow-hidden min-h-screen flex items-center justify-center bg-gradient-to-br from-orange-50 via-white to-orange-100"
     >
+      <SEO
+        title="About IMC Business Solutions - Leading Software Company in Wayanad"
+        description="IMC Business Solutions, established in 2009, is the best software company in Wayanad, Kerala. We deliver enterprise-grade IT services, custom software solutions, web development, and mobile apps to support business growth."
+        keywords="IMC Business Solutions, software company Wayanad, IT company Kerala, custom software development, web development, mobile app development, enterprise software, Kalpetta software company"
+        url="https://icare.imcbs.com/company"
+      />
       {/* Decorative background glow */}
       <div className="absolute top-0 left-0 w-80 h-80 bg-orange-400 rounded-full opacity-20 blur-3xl mix-blend-screen"></div>
       <div className="absolute bottom-0 right-0 w-96 h-96 bg-yellow-400 rounded-full opacity-20 blur-3xl mix-blend-screen"></div>

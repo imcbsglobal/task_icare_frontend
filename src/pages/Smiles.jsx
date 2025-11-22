@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, Upload, Trash2, X, Save, Image as ImgIcon } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const Smiles = () => {
   const [items, setItems] = useState([]);
@@ -151,6 +152,12 @@ const Smiles = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-yellow-50 to-orange-50 p-8">
+      <SEO
+        title="Smiles Gallery - Happy Moments & Success Stories"
+        description="Explore our collection of joyful moments and success stories from satisfied TASK iCare users and IMC Business Solutions clients."
+        keywords="smiles gallery, happy moments, success stories, client happiness, TASK iCare success, business achievements"
+        url="https://icare.imcbs.com/gallery/smiles"
+      />
       <div className="max-w-7xl mx-auto">
         <Link
           to="/gallery"

@@ -1,5 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 import Sidebar from "./components/sidebar";
+import StructuredData from "./components/StructuredData";
 import Home from "./pages/Home";
 import Options from "./pages/Options";
 import Demonstration from "./pages/Demonstration";
@@ -21,6 +22,7 @@ function App() {
 
   return (
     <div className="flex min-h-screen bg-white">
+      <StructuredData />
       <div className="w-64 bg-gray-100">
         <Sidebar />
       </div>

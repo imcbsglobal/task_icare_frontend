@@ -1,0 +1,15 @@
+# robots.txt for TASK iCare Website
+
+User-agent: *
+Allow: /
+
+# Disallow admin and private routes
+Disallow: /admin-login
+Disallow: /dashboard
+Disallow: /gallery/demoupload
+
+# Sitemap location
+Sitemap: https://icare.imcbs.com/sitemap.xml
+
+# Crawl-delay (optional, adjust as needed)
+Crawl-delay: 1
