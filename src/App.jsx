@@ -14,8 +14,8 @@ import Smiles from "./pages/Smiles";
 import Gallery from "./pages/Gallery";
 import OurClients from "./pages/OurClients";
 import Ceremonial from "./pages/Ceremonial";
-import DemoUpload from "./pages/Demoupload";
-import Showcase from "./pages/showcase";
+import DemoUpload from "./pages/DemoUpload";
+import Showcase from "./pages/Showcase";
 
 function App() {
   const location = useLocation();
