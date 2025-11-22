@@ -1,4 +1,4 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from "react-helmet";
 
 const SEO = ({
   title = "TASK iCare - Complete Inventory & Business Management Software",
