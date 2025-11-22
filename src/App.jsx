@@ -15,7 +15,7 @@ import Gallery from "./pages/Gallery";
 import OurClients from "./pages/OurClients";
 import Ceremonial from "./pages/Ceremonial";
 import DemoUpload from "./pages/DemoUpload";
-import Showcase from "./pages/Showcase";
+import Showcase from "./pages/showcase";
 
 function App() {
   const location = useLocation();
