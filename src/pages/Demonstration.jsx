@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO";
 
 const Demonstration = () => {
   const [items, setItems] = useState([]);
@@ -115,6 +116,12 @@ const Demonstration = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-purple-50 via-pink-50 to-blue-50 p-8">
+      <SEO
+        title="Live Demonstrations - TASK iCare Software"
+        description="Watch live demonstrations and product showcases of TASK iCare inventory management software. See how our software simplifies business operations with real-world examples and video tutorials."
+        keywords="TASK iCare demo, software demonstration, product showcase, inventory software demo, live demo, video tutorials, software walkthrough"
+        url="https://icare.imcbs.com/demonstration"
+      />
       <div className="max-w-7xl mx-auto">
         
         {/* Header */}

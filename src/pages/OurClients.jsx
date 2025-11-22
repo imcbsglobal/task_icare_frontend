@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { ArrowLeft, Upload, Trash2, Users, X, Save, Video } from "lucide-react";
 import { Link } from "react-router-dom";
+import SEO from "../components/SEO";
 
 const OurClients = () => {
   const [clients, setClients] = useState([]);
@@ -156,6 +157,12 @@ const OurClients = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
+      <SEO
+        title="Our Clients - Testimonials & Reviews"
+        description="Watch video testimonials and reviews from our valued clients who have experienced the benefits of TASK iCare inventory management software."
+        keywords="client testimonials, customer reviews, TASK iCare reviews, software testimonials, client feedback, customer success stories"
+        url="https://icare.imcbs.com/gallery/clients"
+      />
       <div className="max-w-7xl mx-auto">
 
         <Link

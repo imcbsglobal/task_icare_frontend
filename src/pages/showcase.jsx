@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import SEO from "../components/SEO";
 
 const Showcase = () => {
   const [smileImages, setSmileImages] = useState([]);
@@ -152,6 +153,12 @@ const Showcase = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-50 p-8">
+      <SEO
+        title="Showcase - TASK iCare Success Stories"
+        description="View our showcase of success stories, client testimonials, and ceremonial moments from TASK iCare implementations across various businesses."
+        keywords="TASK iCare showcase, success stories, client testimonials, business implementations, software success"
+        url="https://icare.imcbs.com/showcase"
+      />
       <div className="max-w-7xl mx-auto">
 
         {/* -------- SMILES & STORIES -------- */}

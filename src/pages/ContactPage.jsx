@@ -1,8 +1,15 @@
 import React from "react";
+import SEO from "../components/SEO";
 
 const Contact = () => {
   return (
     <div className="min-h-screen bg-white text-gray-800 flex flex-col">
+      <SEO
+        title="Contact Us - TASK iCare & IMC Business Solutions"
+        description="Get in touch with IMC Business Solutions for TASK iCare software inquiries. Contact us at info@imcbs.com or +91 94470 49940. Office located in Kalpetta, Wayanad, Kerala."
+        keywords="contact IMC Business Solutions, TASK iCare contact, software inquiry, Wayanad contact, Kerala IT company, business software support"
+        url="https://icare.imcbs.com/contact"
+      />
       {/* Header Section */}
       <div className="relative bg-gradient-to-r from-orange-500 to-yellow-400 py-12 text-center overflow-hidden shadow-md">
         <div className="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/asfalt-dark.png')]"></div>

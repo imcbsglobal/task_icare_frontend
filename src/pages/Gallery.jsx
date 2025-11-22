@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { Smile, Users, Award, Presentation } from "lucide-react";
+import SEO from "../components/SEO";
 
 const Gallery = () => {
   const galleryCategories = [
@@ -35,6 +36,12 @@ const Gallery = () => {
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-orange-50 to-white p-8">
+      <SEO
+        title="Gallery - Our Moments & Achievements"
+        description="Explore our gallery of memorable moments, client testimonials, ceremonial events, and achievements at IMC Business Solutions and TASK iCare."
+        keywords="IMC gallery, TASK iCare gallery, client testimonials, company events, achievements, ceremonial moments"
+        url="https://icare.imcbs.com/gallery"
+      />
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-12">
           <h1 className="text-4xl font-bold text-gray-800 mb-4">
